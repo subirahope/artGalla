@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        function show_confirm()
+        {
+            var r = confirm("Press a button")
+            if(r==true)
+            {
+                document.write("You pressed OK");
+            }
+            else
+            {
+                document.write("You pressed cancel");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Show confirm box" onclick="show_confirm()">
+    </form>
+    
+</body>
+</html>

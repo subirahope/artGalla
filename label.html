@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="rad">Radius</label>
+        <input type="text" id ="rad">
+        <br>
+        <br>
+        <label for="ar">Area</label>
+        <input type="text" id ="ar">
+        <br>
+        <br>
+        <label for="circ">Circumference</label>
+        <input type="text" id ="circ">
+        <br><br>
+        <input type="button" value="Submit" name="Submit">
+
+        <script type="text/javascript">
+            function circle(radius)
+            {
+                this.radius = radius;
+                this.area = function()
+                {
+                    return math.PI*this.radius*this.radius;
+                };
+                this.circumference = function()
+                {
+                    return 2*math.PI*this.radius;
+                };
+                var c = new circle(3);
+                console.log("Area = ",
+                c.area().tofixed(2)
+                );
+                console.log("Circumference = ",
+                c.circumference().tofixed(2)
+                );
+            }
+            document.getElementById("Submit").click();
+        </script>
+    </form>
+</body>
+</html>
